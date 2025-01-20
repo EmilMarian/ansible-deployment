@@ -25,11 +25,15 @@
         owner: www-data
         group: www-data
 
+    - name: Configure Github safe directory
+      command: git config --global --add safe.directory /var/www/html
+
     - name: Clone/Update GitHub repository
       git:
-        repo: "https://github.com/EmilMarian/sample-website"
+        repo: "https://EmilMarian:***********@github.com/EmilMarian/sample-website.git"
         dest: "/var/www/html"
         force: yes
+        update: yes
       notify: restart nginx
 
     - name: Configure Nginx site
