@@ -1,0 +1,23 @@
+nsible specific
+inventory/hosts
+*.private
+inventory/*.private
+group_vars/*.private
+host_vars/*.private
+
+# SSH Keys
+*.pem
+*.key
+*_rsa
+*_dsa
+.ssh/
+
+# Environment files
+*.env
+.env*
+.secrets
+
+# System files
+.DS_Store
+*.swp
+*.swo
